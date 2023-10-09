@@ -17,3 +17,16 @@ body .cookies {
   opacity: 1;
   transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
+#middleImage{
+  width: 100%;
+  height: 400px;
+  filter: blur(2px);
+}
+.cardCustom{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.imgCardCustom {
+  width: 60px;
+}
