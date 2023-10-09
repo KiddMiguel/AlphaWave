@@ -1,3 +1,7 @@
+![alt text](https://github.com/KiddMiguel/AlphaWave/blob/main/AlphaWave.png)
+
+
+
 Pour les pages :
 - Login et Inscription
 - accueil
