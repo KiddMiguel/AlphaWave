@@ -1,0 +1,21 @@
+body {
+    header {
+        background: rgb(1, 48, 97);
+        .active {
+            color: rgba(36, 163, 255, 255) !important;
+        }
+    }
+    .cookies {
+        background: rgba(36, 163, 255, 255);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}

@@ -1,0 +1,164 @@
+{
+    "products": [{
+            "id": 1,
+            "name": "Ordinateur Portable Alpha",
+            "description": "Ordinateur portable 15 pouces avec processeur Intel i7.",
+            "price": 1200.50,
+            "stock": 10,
+            "image": "https://exemple.com/images/ordinateur_alpha.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Souris Gamer Beta",
+            "description": "Souris ergonomique avec 7 boutons programmables.",
+            "price": 49.99,
+            "stock": 25,
+            "image": "https://exemple.com/images/souris_beta.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Clavier Mécanique Gamma",
+            "description": "Clavier mécanique RGB avec switches Cherry MX.",
+            "price": 129.99,
+            "stock": 15,
+            "image": "https://exemple.com/images/clavier_gamma.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Écran 27 pouces Delta",
+            "description": "Écran 4K UHD, 60Hz.",
+            "price": 299.99,
+            "stock": 20,
+            "image": "https://exemple.com/images/ecran_delta.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Webcam Zeta",
+            "description": "Webcam HD 1080p avec microphone intégré.",
+            "price": 69.99,
+            "stock": 30,
+            "image": "https://exemple.com/images/webcam_zeta.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Disque Dur Externe Eta",
+            "description": "Disque dur externe 2To USB 3.0.",
+            "price": 89.99,
+            "stock": 45,
+            "image": "https://exemple.com/images/hdd_eta.jpg"
+        },
+
+        {
+            "id": 7,
+            "name": "Casque Audio Theta",
+            "description": "Casque audio Bluetooth avec réduction de bruit.",
+            "price": 139.99,
+            "stock": 55,
+            "image": "https://exemple.com/images/casque_theta.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Tablette Iota",
+            "description": "Tablette 10 pouces avec 64GB de stockage.",
+            "price": 259.99,
+            "stock": 32,
+            "image": "https://exemple.com/images/tablette_iota.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Station d'Accueil Kappa",
+            "description": "Station d'accueil USB-C avec multiples ports.",
+            "price": 99.99,
+            "stock": 40,
+            "image": "https://exemple.com/images/station_kappa.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Enceinte Bluetooth Lambda",
+            "description": "Enceinte sans fil avec 12 heures d'autonomie.",
+            "price": 59.99,
+            "stock": 60,
+            "image": "https://exemple.com/images/enceinte_lambda.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Chargeur Rapide Mu",
+            "description": "Chargeur mural USB-C 20W.",
+            "price": 19.99,
+            "stock": 100,
+            "image": "https://exemple.com/images/chargeur_mu.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Caméra de Surveillance Nu",
+            "description": "Caméra IP Wi-Fi avec vision nocturne.",
+            "price": 79.99,
+            "stock": 35,
+            "image": "https://exemple.com/images/camera_nu.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Routeur Wi-Fi Xi",
+            "description": "Routeur dual-band avec 4 antennes.",
+            "price": 109.99,
+            "stock": 25,
+            "image": "https://exemple.com/images/routeur_xi.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Montre Connectée Omicron",
+            "description": "Montre intelligente avec suivi de fitness.",
+            "price": 149.99,
+            "stock": 42,
+            "image": "https://exemple.com/images/montre_omicron.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Clé USB Pi",
+            "description": "Clé USB 3.1 de 128GB.",
+            "price": 24.99,
+            "stock": 150,
+            "image": "https://exemple.com/images/cle_pi.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Adaptateur HDMI Rho",
+            "description": "Adaptateur USB-C vers HDMI 4K.",
+            "price": 14.99,
+            "stock": 80,
+            "image": "https://exemple.com/images/adaptateur_rho.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Sac à Dos Sigma",
+            "description": "Sac à dos pour transport d'ordinateur portable.",
+            "price": 49.99,
+            "stock": 50,
+            "image": "https://exemple.com/images/sac_sigma.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Tapis de Souris Tau",
+            "description": "Tapis de souris ergonomique.",
+            "price": 9.99,
+            "stock": 120,
+            "image": "https://exemple.com/images/tapis_tau.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Support d'Ordinateur Upsilon",
+            "description": "Support en aluminium pour ordinateur portable.",
+            "price": 29.99,
+            "stock": 70,
+            "image": "https://exemple.com/images/support_upsilon.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Refroidisseur d'Ordinateur Phi",
+            "description": "Refroidisseur avec 4 ventilateurs LED.",
+            "price": 34.99,
+            "stock": 65,
+            "image": "https://exemple.com/images/refroidisseur_phi.jpg"
+        }
+    ]
+}
