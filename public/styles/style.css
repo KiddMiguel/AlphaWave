@@ -16,6 +16,7 @@ body .cookies {
   padding: 2rem;
   opacity: 1;
   transition: 0.5s;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
 #middleImage{
   width: 100%;
@@ -29,4 +30,14 @@ body .cookies {
 }
 .imgCardCustom {
   width: 60px;
+}
+.footerCustom{
+  background-color: rgb(1, 48, 97);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
 }
