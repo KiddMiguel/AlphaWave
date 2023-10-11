@@ -10,7 +10,7 @@
     <title>AlphaWave</title>
 </head>
 
-<body style="height:100vh">
+<body style="height:100vh"></body>
 
     <?php require_once 'views/includes/header.php';
 
