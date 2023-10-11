@@ -8,7 +8,9 @@ class Controller
     {
         $this->unModele = new Modele($server, $bdd, $user, $mdp);
     }
-    /****************CONTROLLER LOCATAIRE********** */
-    
+
+    public function getProduits(){
+        return $this->unModele->getProduits();
+    }
 
 }

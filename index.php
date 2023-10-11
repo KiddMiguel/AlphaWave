@@ -32,6 +32,9 @@ if (isset($_GET["page"])) {
         case 'connexixon':
             require_once 'views/inscription.php';
             break;
+        case 'produits':
+            require_once 'views/produit.php';
+            break;
         default:
             require_once 'views/acceuil.php';
     }

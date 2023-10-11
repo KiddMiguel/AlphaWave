@@ -16,6 +16,16 @@ class Modele
     }
     
     public function getProduits(){
-        
+        if($this->unPDO != null){
+            try{
+            $query = "SELECT * FROM produits";
+            $select = $this->unPDO->prepare($query);
+            $select->execute();
+            $produits = $select->fetchAll();
+            return $produits;
+            }catch (PDOException $exp) {
+                echo 'Erreur de récupération des produits: ' . $exp->getMessage();
+            }
+        }
     }
 }

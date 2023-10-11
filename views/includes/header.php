@@ -7,7 +7,7 @@
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a href="index?page=home" class="nav-link px-2 link-light">Accueil</a></li>
-      <li><a href="index?page=" class="nav-link px-2 link-light">Produit</a></li>
+      <li><a href="index?page=produit" class="nav-link px-2 link-light">Nos Produits</a></li>
       <li><a href="#" class="nav-link px-2 link-light">A propos</a></li>
     </ul>
 
