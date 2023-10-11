@@ -29,6 +29,9 @@ if (isset($_GET["page"])) {
         case 'inscription':
             require_once 'views/inscription.php';
             break;
+        case 'connexixon':
+            require_once 'views/inscription.php';
+            break;
         default:
             require_once 'views/acceuil.php';
     }
