@@ -11,17 +11,32 @@
 </head>
 
 <body style="height:100vh">
-    
-<?php   require_once 'views/includes/header.php';?>
-    
-<?php   require_once 'views/acceuil.php';?>
+
+    <?php require_once 'views/includes/header.php';
+
+$page ='';
+if (isset($_GET["page"])) {
+    $page = $_GET["page"];
+} else {
+    $page = "home";
+    // header("location: index.php?page=home");
+}
+
+    switch ($page) {
+        case 'home':
+            require_once 'views/acceuil.php';
+            break;
+        case 'inscription':
+            require_once 'views/inscription.php';
+            break;
+        default:
+            require_once 'views/acceuil.php';
+    }
 
 
-<?php   require_once 'views/includes/footer.php';?>
+    require_once 'views/includes/footer.php'; ?>
 
-
-        
-      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="public/javaScript/script.js"></script>
