@@ -36,6 +36,9 @@ if (isset($_GET["page"])) {
         case 'produit':
             require_once 'views/produit.php';
             break;
+        case 'profil':
+            require_once 'views/profil.php';
+                break;
         default:
             require_once 'views/acceuil.php';
             
