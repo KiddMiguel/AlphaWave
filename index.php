@@ -10,10 +10,11 @@
     <title>AlphaWave</title>
 </head>
 
-<body style="height:100vh"></body>
+<body class="d-flex flex-column min-vh-100">
 
-    <?php require_once 'views/includes/header.php';
-
+    <?php require_once 'views/includes/header.php';?>
+<main class="flex-grow-1">
+<?php
 $page ='';
 if (isset($_GET["page"])) {
     $page = $_GET["page"];
@@ -30,10 +31,14 @@ if (isset($_GET["page"])) {
             require_once 'views/inscription.php';
             break;
         case 'connexixon':
-            require_once 'views/inscription.php';
+            require_once 'views/connexion.php';
+            break;
+        case 'produit':
+            require_once 'views/produit.php';
             break;
         default:
             require_once 'views/acceuil.php';
+            
     }
 
 
