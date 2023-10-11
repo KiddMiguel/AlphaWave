@@ -1,3 +1,11 @@
+<?php 
+include_once ('service/databases/config_database.php');
+include_once ('service/controllers/controller.php');
+
+$unController = new Controller($server, $bdd, $user, $mdp);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

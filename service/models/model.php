@@ -18,7 +18,7 @@ class Modele
     public function getProduits(){
         if($this->unPDO != null){
             try{
-            $query = "SELECT * FROM produits";
+            $query = "SELECT * FROM produit";
             $select = $this->unPDO->prepare($query);
             $select->execute();
             $produits = $select->fetchAll();

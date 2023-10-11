@@ -1,5 +1,6 @@
 <?php
-require_once("../databases/config_database.php");
+require_once "./service/databases/config_database.php";
+require_once "./service/models/model.php";
 class Controller
 {
     private $unModele;
