@@ -31,7 +31,7 @@ if (isset($_GET["page"])) {
             require_once 'views/inscription.php';
             break;
         case 'connexixon':
-            require_once 'views/connexion.php';
+            require_once 'views/login.php';
             break;
         case 'produit':
             require_once 'views/produit.php';
@@ -40,8 +40,9 @@ if (isset($_GET["page"])) {
             require_once 'views/acceuil.php';
             
     }
-
-
+    ?>
+</main>
+<?php
     require_once 'views/includes/footer.php'; ?>
 
     </div>
