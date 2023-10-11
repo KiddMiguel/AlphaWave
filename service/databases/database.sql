@@ -1,5 +1,5 @@
 -- Assuming this is some metadata, left it as is
--- Active: 1697027731257@@127.0.0.1@3306
+-- Active: 1697035547609@@127.0.0.1@3306
 drop DATABASE IF EXISTS alphawave;
 CREATE DATABASE alphawave;
 USE alphawave;
@@ -76,3 +76,5 @@ INSERT INTO produit(intitule, description, prix, image, idUser) VALUES
 ('PC Portable 6', 'Portable pour dessin', 1020.00, 'pc18.jpg', 8),
 ('PC Gamer 7', 'PC pour compétition', 1750.00, 'pc19.jpg', 9),
 ('PC Bureau 7', 'PC pour serveur', 850.00, 'pc20.jpg', 10);
+
+SELECT * FROM user ;

@@ -10,7 +10,7 @@
         <label class="titre" for="Mot de passe">Mot de passe</label>
       </div>
       <div class="mb-3">
-      <input type="text" name="moDePasse">
+      <input type="text" name="password">
       </div>
       <div class="mb-3">
       <subm
@@ -18,3 +18,12 @@
         </div>
     </form>
 </div>
+
+<?php 
+if (isset($_POST["submit"])) {
+  $data = [
+      "email" => $_POST["email"],
+      "password" => $_POST["password"],
+  ];
+  $unController->connectionUser($data);
+}?>

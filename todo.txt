@@ -1,5 +1,3 @@
-
 inscription haché mot de passe
 page admin avec crud
 page profil pour ajouter image
-affichage produit

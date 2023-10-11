@@ -1,6 +1,7 @@
-<?php 
-include_once ('service/databases/config_database.php');
-include_once ('service/controllers/controller.php');
+<?php
+session_start();
+include_once('service/databases/config_database.php');
+include_once('service/controllers/controller.php');
 
 $unController = new Controller($server, $bdd, $user, $mdp);
 
@@ -20,40 +21,39 @@ $unController = new Controller($server, $bdd, $user, $mdp);
 
 <body class="d-flex flex-column min-vh-100">
 
-    <?php require_once 'views/includes/header.php';?>
-<main class="flex-grow-1">
-<?php
-$page ='';
-if (isset($_GET["page"])) {
-    $page = $_GET["page"];
-} else {
-    $page = "home";
-    // header("location: index.php?page=home");
-}
+    <?php require_once 'views/includes/header.php'; ?>
+    <main class="flex-grow-1">
+        <?php
+        $page = '';
+        if (isset($_GET["page"])) {
+            $page = $_GET["page"];
+        } else {
+            $page = "home";
+            // header("location: index.php?page=home");
+        }
 
-    switch ($page) {
-        case 'home':
-            require_once 'views/acceuil.php';
-            break;
-        case 'inscription':
-            require_once 'views/inscription.php';
-            break;
-        case 'connexixon':
-            require_once 'views/login.php';
-            break;
-        case 'produit':
-            require_once 'views/produit.php';
-            break;
-        case 'profil':
-            require_once 'views/profil.php';
+        switch ($page) {
+            case 'home':
+                require_once 'views/acceuil.php';
                 break;
-        default:
-            require_once 'views/acceuil.php';
-            
-    }
-    ?>
-</main>
-<?php
+            case 'inscription':
+                require_once 'views/inscription.php';
+                break;
+            case 'connexixon':
+                require_once 'views/login.php';
+                break;
+            case 'produit':
+                require_once 'views/produit.php';
+                break;
+            case 'profil':
+                require_once 'views/profil.php';
+                break;
+            default:
+                require_once 'views/acceuil.php';
+        }
+        ?>
+    </main>
+    <?php
     require_once 'views/includes/footer.php'; ?>
 
     </div>

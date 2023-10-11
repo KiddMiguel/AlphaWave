@@ -10,8 +10,16 @@ class Controller
         $this->unModele = new Modele($server, $bdd, $user, $mdp);
     }
 
-    public function getProduits(){
+    public function getProduits()
+    {
         return $this->unModele->getProduits();
     }
-
+    public function createUser($data)
+    {
+        return $this->unModele->createUser($data);
+    }
+    public function connectionUser($data)
+    {
+        return $this->unModele->connectionUser($data);
+    }
 }
