@@ -1,0 +1,6 @@
+inscription et connection en html
+passer les fichier en .php
+créer base donnée avec mariadb,
+inscription haché mot de passe
+page admin avec crud
+page profil pour ajouter image
