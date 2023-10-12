@@ -1,5 +1,4 @@
--- Assuming this is some metadata, left it as is
--- Active: 1697035547609@@127.0.0.1@3306
+-- Active: 1697027731257@@127.0.0.1@3306@alphawave
 drop DATABASE IF EXISTS alphawave;
 CREATE DATABASE alphawave;
 USE alphawave;
@@ -26,12 +25,13 @@ CREATE TABLE admin (
     image VARCHAR(100),
     PRIMARY KEY (idAdmin)
 );
+drop table produit;
 
 CREATE TABLE produit(
     idProduit INT(5) NOT NULL AUTO_INCREMENT,
     intitule VARCHAR(50),
     description VARCHAR(100),
-    prix DECIMAL(10,2),
+    prix VARCHAR(20),
     image VARCHAR(100),
     idUser INT(5),
     PRIMARY KEY (idProduit),

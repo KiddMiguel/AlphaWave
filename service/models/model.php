@@ -19,7 +19,7 @@ class Modele
     {
         if ($this->unPDO != null) {
             try {
-                $query = "SELECT * FROM produit";
+                $query = "SELECT * FROM produit ORDER BY idProduit DESC";
                 $select = $this->unPDO->prepare($query);
                 $select->execute();
                 $produits = $select->fetchAll();

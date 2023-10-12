@@ -6,12 +6,15 @@
          foreach ($produits as $produit) {
             echo '
             <div class="col-lg-3 col-md-3 m-3 col-sm-3 card" style="width: 18rem;">
-            <img src="'.$produit['image'].'" class="card-img-top" alt="...">
+            <img src="' . $produit['image'] . '" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">'.$produit['intitule'].'</h5>
                 <p class="card-text">'.$produit['description'].'</p>
+                <div class="d-flex">
                 <a href="#" class="btn btn-primary">Voir</a>
-            </div>
+                <p href="#" class="ms-auto pb-2" class="btn btn-success">'.$produit['prix'].' €</p>
+                </div>            
+               </div>
         </div>';
          }
 
