@@ -65,6 +65,44 @@ class Modele
             }
         }
     }
+    public function updateUser($data)
+    {
+        if ($this->unPDO != null) {
+            try {
+                $query = "UPDATE user SET nom=:nom, prenom=:prenom, email=:email, tel=:tel, cp=:cp, ville=:ville, image=:image WHERE id=:id";
+                $update = $this->unPDO->prepare($query);
+                $update->bindParam(':nom', $data['nom'], PDO::PARAM_STR);
+                $update->bindParam(':prenom', $data['prenom'], PDO::PARAM_STR);
+                $update->bindParam(':email', $data['email'], PDO::PARAM_STR);
+                $update->bindParam(':tel', $data['tel'], PDO::PARAM_STR);
+                $update->bindParam(':cp', $data['cp'], PDO::PARAM_STR);
+                $update->bindParam(':ville', $data['ville'], PDO::PARAM_STR);
+                $update->bindParam(':image', $data['image'], PDO::PARAM_STR);
+                $update->bindParam(':id', $data['id'], PDO::PARAM_INT);
+                $update->execute();
+                return true;
+            } catch (PDOException $exp) {
+                echo 'Erreur de mise à jour du profil: ' . $exp->getMessage();
+            }
+        }
+        return false;
+    }
+    public function getUserProfile($userId)
+    {
+        if ($this->unPDO != null) {
+            try {
+                $query = "SELECT * FROM user WHERE id = :idUser";
+                $stmt = $this->unPDO->prepare($query);
+                $stmt->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+                $stmt->execute();
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                return $user;
+            } catch (PDOException $exp) {
+                echo 'Erreur de récupération du profil: ' . $exp->getMessage();
+            }
+        }
+        return null;
+    }
 
     /*TEST HACH ----------------------
 

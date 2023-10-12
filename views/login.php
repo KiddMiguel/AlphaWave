@@ -33,6 +33,12 @@ if (isset($_POST["submit"])) {
     $_SESSION["id_user"] = $user["idUser"];
     $_SESSION["nom"] = $user["nom"];
     $_SESSION["prenom"] = $user["prenom"];
+    $_SESSION["email"] = $user["email"];
+    $_SESSION["tel"] = $user["tel"];
+    $_SESSION["cp"] = $user["cp"];
+    $_SESSION["ville"] = $user["ville"];
+    $_SESSION["image"] = $user["image"];
+    
     header("location: index.php?page=home&id_user=" . $_SESSION["id_user"] . "");
     exit;
   } else {

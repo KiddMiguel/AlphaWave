@@ -22,4 +22,12 @@ class Controller
     {
         return $this->unModele->connectionUser($data);
     }
+    public function updateUser($data)
+    {
+        return $this->unModele->updateUser($data);
+    }
+    public function getUserProfile($userId)
+    {
+        return $this->unModele->getUserProfile($userId);
+    }
 }
