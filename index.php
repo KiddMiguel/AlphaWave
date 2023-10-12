@@ -48,6 +48,10 @@ $unController = new Controller($server, $bdd, $user, $mdp);
             case 'profil':
                 require_once 'views/profil.php';
                 break;
+            case 'deconnexion':
+                session_destroy();
+                header("location: index.php?page=home");
+                break;
             default:
                 require_once 'views/acceuil.php';
         }

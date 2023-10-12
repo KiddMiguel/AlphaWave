@@ -27,7 +27,7 @@
         </div>
         <label class="titre" for="password">Mot de passe</label>
         <div class="mb-3">
-            <input type="text" name="password">
+            <input type="password" name="password">
         </div>
         <label class="titre" for="image">Photo de profil</label>
         <div class="mb-3">
@@ -58,5 +58,14 @@ if (isset($_POST["submit"])) {
         "password" => $_POST["password"],
     ];
     $unController->createUser($data);
+
+    if ($unController->createUser($data) == true) {
+        $user = $unController->connectionUser($data);
+        var_dump($user);
+        $_SESSION["id_user"] = $user["idUser"];
+        $_SESSION["nom"] = $user["nom"];
+        $_SESSION["prenom"] = $user["prenom"];
+        header("location: index.php?page=home&id_user=" . $_SESSION["id_user"] . "");
+    }
 }
 ?>

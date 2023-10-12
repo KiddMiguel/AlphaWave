@@ -49,8 +49,9 @@ class Modele
             }
         }
     }
-    public function connectionUser ($data) {
-        if($this->unPDO != null) {
+    public function connectionUser($data)
+    {
+        if ($this->unPDO != null) {
             try {
                 $query = "SELECT * FROM user WHERE BINARY email=:email and BINARY password=:password";
                 $select = $this->unPDO->prepare($query);
@@ -59,7 +60,58 @@ class Modele
                 $select->execute();
                 $user = $select->fetch();
                 return $user;
+            } catch (PDOException $exp) {
+                echo 'Erreur de récupération des produits: ' . $exp->getMessage();
             }
         }
     }
+
+    /*TEST HACH ----------------------
+
+    public function createUser($data)
+    {
+        if ($this->unPDO != null) {
+            try {
+                $hashed_password = password_hash($data["password"], PASSWORD_DEFAULT);
+                $query = "INSERT INTO user(nom, prenom, email, tel, cp , ville ,password ) 
+                          VALUES(:nom, :prenom, :email, :tel, :cp, :ville, :password)";
+                $insert = $this->unPDO->prepare($query);
+                $insert->bindParam(':nom', $data["nom"], PDO::PARAM_STR);
+                $insert->bindParam(':prenom', $data["prenom"], PDO::PARAM_STR);
+                $insert->bindParam(':email', $data["email"], PDO::PARAM_STR);
+                $insert->bindParam(':tel', $data["tel"], PDO::PARAM_STR);
+                $insert->bindParam(':cp', $data["cp"], PDO::PARAM_STR);
+                $insert->bindParam(':ville', $data["ville"], PDO::PARAM_STR);
+                $insert->bindParam(':password', $hashed_password, PDO::PARAM_STR);
+                $insert->execute();
+                return true;
+            } catch (PDOException $exp) {
+                echo 'Erreur de création de l\'utilisateur: ' . $exp->getMessage();
+                return false;
+            }
+        }
+    }
+
+    public function connectionUser($data)
+    {
+        if ($this->unPDO != null) {
+            try {
+                $query = "SELECT * FROM user WHERE BINARY email=:email";
+                $select = $this->unPDO->prepare($query);
+                $select->bindParam(':email', $data['email'], PDO::PARAM_STR);
+                $select->execute();
+                $user = $select->fetch();
+                var_dump($user);
+                var_dump($data['password']);
+                var_dump($user['password']);
+                if ($user && password_verify($data['password'], $user['password'])) {
+                    return $user;
+                } else {
+                    return null;
+                }
+            } catch (PDOException $exp) {
+                echo 'Erreur de connexion utilisateur: ' . $exp->getMessage();
+            }
+        }
+    }*/
 }

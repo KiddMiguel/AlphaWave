@@ -1,29 +1,44 @@
 <div class="text-center">
   <h1 class="mb-4">Connection</h1>
-    <form action="post">
-      <div class="mb-3">
-        <label class="titre" for="email">email</label>
-        </div>
-        <input type="email" name="email">
-      
-      <div class="mb-3">
-        <label class="titre" for="Mot de passe">Mot de passe</label>
-      </div>
-      <div class="mb-3">
-      <input type="text" name="password">
-      </div>
-      <div class="mb-3">
-      <subm
-      <button type="submit" class="btn btn-primary">Se connecter</button>
-        </div>
-    </form>
+  <form method="post">
+    <div class="mb-3">
+      <label class="titre" for="email">email</label>
+    </div>
+    <input type="email" name="email">
+
+    <div class="mb-3">
+      <label class="titre" for="Mot de passe">Mot de passe</label>
+    </div>
+    <div class="mb-3">
+      <input type="password" name="password">
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary" name="submit">Se connecter</button>
+      <?php
+      $erreur = "";
+      ?>
+    </div>
+  </form>
 </div>
 
-<?php 
+<?php
 if (isset($_POST["submit"])) {
   $data = [
-      "email" => $_POST["email"],
-      "password" => $_POST["password"],
+    "email" => $_POST["email"],
+    "password" => $_POST['password'],
   ];
-  $unController->connectionUser($data);
-}?>
+
+  $user = $unController->connectionUser($data);
+  if ($user != null) {
+    $_SESSION["id_user"] = $user["idUser"];
+    $_SESSION["nom"] = $user["nom"];
+    $_SESSION["prenom"] = $user["prenom"];
+    header("location: index.php?page=home&id_user=" . $_SESSION["id_user"] . "");
+    exit;
+  } else {
+    echo '<div class="alert alert-danger text-center" role="alert">
+      Mot de passe ou email incorrect !
+      </div>';
+  }
+}
+?>

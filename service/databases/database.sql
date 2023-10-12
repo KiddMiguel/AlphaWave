@@ -77,4 +77,3 @@ INSERT INTO produit(intitule, description, prix, image, idUser) VALUES
 ('PC Gamer 7', 'PC pour compétition', 1750.00, 'pc19.jpg', 9),
 ('PC Bureau 7', 'PC pour serveur', 850.00, 'pc20.jpg', 10);
 
-SELECT * FROM user ;
